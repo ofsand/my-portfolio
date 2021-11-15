@@ -1,11 +1,12 @@
 import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro";
-import Portfolio from "./components/portfolio/Portfolio";
+import Portfolio from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
-import Works from "./works/Works";
+import Works from "./components/technologies/Technologies";
 import "./app.scss"
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
+
 
 function App() {
   const [menuOpen,setMenuOpen] = useState(false)

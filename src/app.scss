@@ -21,3 +21,11 @@
         }
     }
 }
+
+/*---Add-Particles---*/
+.tsparticles-canvas-el{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
