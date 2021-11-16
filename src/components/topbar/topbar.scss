@@ -17,6 +17,9 @@
         justify-content: space-between;
 
         .left{
+        }
+
+        .center{
             display: flex;
             align-items: center;
 
@@ -25,24 +28,9 @@
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
-                margin-right: 40px;
+                
             }
 
-            .itemContainer{
-                display: flex;
-                align-items: center;
-                margin-left: 30px;
-
-                .icon{
-                    font-size: 18px;
-                    margin-right: 5px;
-                }
-
-                span{
-                    font-size: 15x;
-                    font-weight: 400;
-                }
-            }
         }
 
         .right{
