@@ -1,33 +1,173 @@
 @import "../../global.scss";
 
 .experience{
-    display: flex;
-    flex-direction: row;
     background-color: white;
+    overflow: hidden;
 
-    .left{
+    /*Titles: study and work*/
+    .experienceTitles{
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 0 20px 0;
+
+    .study{
         flex:1;
         text-align: center;
-
         h2{
             margin-top: 10px;
         }
-        .wrapper{
-            height: 80%;
-            border-right: black 1px solid;
-        }
     }
 
-    .right{
+    .work{
         flex:1;
         text-align: center;
-
         h2{
             margin-top: 10px;
         }
-        .wrapper{
-            height: 80%;
-            border-left: black 1px solid;
-        }
     }
+}
+
+.timeline-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    max-width: 90%;
+    left: 5%;
+    min-height: calc(100vh - 134px);
+   
+    background-color: cyan;
+    /*the big horizontal line in the middle*/
+    &::after{
+        background-color: crimson;
+        content: '';
+        position: absolute;
+        left: calc(50% - 1px);
+        width: 2px;
+        height: 100%;
+    }
+
+    /*Psitionning of data container wrapper*/
+    .timeline-item{
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 0;
+        /*background-color: darkgreen;*/
+        width: 45%;
+        height: auto;
+        position: relative;
+        
+        /*Positionning of the odd data container*/
+        &:nth-child(odd){
+            align-self: flex-end;
+            padding-left: 5%;
+            /*Positionning of the odd timeline item content*/
+            &:nth-child(odd){
+                justify-content: flex-start;
+                /*Positionning of time to the left*/
+                .item-element:nth-child(1){
+                    text-align: left;
+                    order:1;
+                    flex: 0.2;
+                }
+                /*Positionning of other data on the right*/
+                .item-element:nth-child(2){
+                    text-align: right;
+                    order:2;
+                    flex: 0.8;
+                    /*switch the order between place and city*/
+                    .item-element-2-content:nth-child(1){
+                        order: 2;
+                    }
+                    .item-element-2-content:nth-child(2){
+                        order: 1;
+                    }
+                }
+                /*Positionning of the middle squares*/
+                .square{left: -6.5px;}
+            }
+            /*Positionning of the middle verticale lines*/
+            &::after{
+                left: 0px;
+            }
+
+        }
+        /*Positionning of the even data container*/
+        &:nth-child(even){
+            align-self: flex-start;
+            justify-content: flex-end;
+            padding-right: 5%;
+            /*Positionning of the even timeline item content*/
+            &:nth-child(even){
+                justify-content: flex-end;
+                /*Positionning of time to the right*/
+                .item-element:nth-child(1){
+                    text-align: right;
+                    order:2;
+                    flex: 0.2;
+                }
+                /*Positionning of other data on the left*/
+                .item-element:nth-child(2){
+                    text-align: left;
+                    order:1;
+                    flex: 0.8;
+                }
+                /*Positionning of the middle squares*/
+                .square{right: -5.5px;}
+                }
+                /*Positionning of the middle verticale lines*/
+                &::after{
+                    right:  0px;
+                }
+
+            }
+
+        /*Define the middle verticale lines*/
+        &::after{
+            background-color: crimson;
+            content: '';
+            position: absolute;
+            top: 15px;
+            width: 10%;
+            height: 2px;
+        }
+        /*Define the data container*/
+        .timeline-item-content{
+            background-color: cornflowerblue;
+            max-width: 90%;
+            width: 450px;
+            height: auto;
+            border-radius: 5px;
+            border: 1px brown solid;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            display: flex;
+            padding: 8px;
+            /*Positionning of the place and city next to each*/
+            .item-element-2{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .item-element-2-content:nth-child(1){
+                    flex: 0.3;
+                }
+                .item-element-2-content:nth-child(2){
+                    flex: 0.6;
+                }
+            }
+        }
+        /*Define the middle square*/
+        .square{
+            background-color: chocolate;
+            width: 12px;
+            height: 12px;
+            transform:rotate(45deg);
+            position: absolute;
+            top: 10px;
+        }
+ 
+    }
+}
+
 }
