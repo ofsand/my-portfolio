@@ -24,6 +24,9 @@ const experiences = [
     },
     {
         title: 'self thaught'
+    },
+    {
+        title: 'self thaught'
     }
     
 ];
@@ -33,8 +36,8 @@ export default function Experience() {
     return (
         <div className="experience" id="experience">
             <div className="experienceTitles">
-                <h2 className="study">Study</h2>
-                <h2 className="work">Work</h2>
+                <h2 className="study">Studies</h2>
+                <h2 className="work">Work Experience</h2>
             </div>
             <div className="timeline-container">
                 <span className="square square-top"></span>
