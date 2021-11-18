@@ -1,3 +1,66 @@
-.works {
-    background-color: lightgreen;
+    .technologies{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: white;
+        
+
+        .tech-container{
+        border: 1px solid black;
+        border-radius: 20px;
+        justify-content:stretch;
+        height: fit-content;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        margin: 8% 2% 5% 2%;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+        
+        .tech-title{
+            flex: 0.3;
+            margin: 10px 0px 10px 0px;
+            z-index: 2;
+        }
+        .tech-img{
+            position: relative;
+            height:fit-content;
+            overflow: hidden;
+            margin: 10px 0px 10px 0px;
+            z-index: 1;
+            img{
+                max-width:70%;
+                max-height:70%;
+            }
+            .line{
+                background-color: rgba(0, 0, 0, 0.6);
+                position: absolute;
+                width: 80%;
+                margin: 0% 10% 0% 10%;
+                height: 2px;
+                border-radius: 10px;
+                bottom: 0px;
+                right:0px;
+            }
+        }
+        .tech-details{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: space-around;
+            height: min-content;
+            margin: 10px 0px 10px 0px;
+
+            .tech-details-item{
+                background-color: blue;
+                opacity: 0.9;
+                border-radius: 20px;
+                box-shadow: 2px 2px  rgba(0,0,0, 0.4);
+                height: fit-content;
+                width: fit-content;
+                padding: 5px;
+                margin: 5px 2px 5px 2px;
+            }
+        }
+    }
 }
