@@ -31,7 +31,11 @@ export default function Intro() {
                         <span ref={textRef}></span>
                         </h3>
                 </div>
-                <a href="#portfolio">
+                <div className="wrapper_2">
+                    <button type="submit">View my Resume</button>
+                    <a href="#contact"><button type="submit">Hire me</button></a>
+                </div>
+                <a href="#experience" className="btn-down">
                     <img src="assets/down.png" alt="down"></img>
                 </a>
             </div>
