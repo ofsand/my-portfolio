@@ -37,6 +37,7 @@ export default function Experience() {
                 <h2 className="work">Work</h2>
             </div>
             <div className="timeline-container">
+                <span className="square square-top"></span>
                 {experiences.map((exp) => {
                     const {title, place, city, time, desc} = exp;
                     return(
@@ -53,10 +54,11 @@ export default function Experience() {
                                 </div>
                                 <p>{desc}</p>
                             </div>
-                            <span className="square"></span>
+                            <span className="square square-middle"></span>
                         </div>
                     </div>
                 )})}
+                <span className="square square-bottom"></span>
             </div>
         </div>
     )
