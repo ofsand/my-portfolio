@@ -38,10 +38,27 @@
     left: 5%;
     min-height: calc(100vh - 134px);
    
-    background-color: cyan;
+    /*the two squares in the center of the timline top and bottom*/
+    .square{
+        background-color: $themeColor;
+        width: 12px;
+        height: 12px;
+        transform:rotate(45deg);
+        position: absolute;
+        right: calc(50% - 6px);
+
+        &.square-top{
+            top: 2px;
+        }
+        &.square-bottom{
+            bottom: 5px;
+        }
+    }
+    /*****/
+
     /*the big horizontal line in the middle*/
     &::after{
-        background-color: crimson;
+        background-color: $themeColor;
         content: '';
         position: absolute;
         left: calc(50% - 1px);
@@ -126,7 +143,7 @@
 
         /*Define the middle verticale lines*/
         &::after{
-            background-color: crimson;
+            background-color: $themeColor;
             content: '';
             position: absolute;
             top: 15px;
@@ -140,7 +157,7 @@
             width: 450px;
             height: auto;
             border-radius: 5px;
-            border: 1px brown solid;
+            border: 1px $themeColor;
             box-shadow: 0 0 5px rgba(0,0,0,0.3);
             display: flex;
             padding: 8px;
@@ -157,13 +174,8 @@
                 }
             }
         }
-        /*Define the middle square*/
-        .square{
-            background-color: chocolate;
-            width: 12px;
-            height: 12px;
-            transform:rotate(45deg);
-            position: absolute;
+        /*Define top position of the middle square*/
+        .square-middle{
             top: 10px;
         }
  
