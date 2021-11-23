@@ -2,47 +2,71 @@
 
 .topbar {
     width: 100%;
-    height: 70px;
-    background-color: white;
+    height: 66px;
+    background-color: $themeColor;
     color: $mainColor;
     position: fixed;
     top:0;
     z-index: 3;
     transition: all 1s ease;
-    filter: drop-shadow(1px 1px 5px #0a4c8d);
-
+    filter: drop-shadow(5px 5px 8px #4596ec8a);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
 
     .wrapper{
         padding: 10px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100vw;
 
         .left{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                @include mobile{
+                    flex: 1;
+                }
         }
 
         .center{
-            display: flex;
-            align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
             .logo{
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
-                
+
+                @include mobile{
+                    flex: 1;
+                    font-size: 1.5em;
+                }
             }
 
         }
 
         .right{
-            .hamburger {
-                width: 32px;
-                height: 25px;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                cursor: pointer;
+                justify-content: flex-end;
+
+                @include mobile{
+                    flex: 1;
+                }
+            .hamburger {
+
+                    width: 32px;
+                    height: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    cursor: pointer;
 
                 span{
                     width: 100%;
@@ -59,6 +83,7 @@
     &.active{
         background-color: $mainColor;
         color: white;
+        filter: drop-shadow(1px 1px 5px #ffffff00);
 
         .hamburger{
             span{

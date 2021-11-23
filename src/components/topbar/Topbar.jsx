@@ -6,11 +6,11 @@ export default function Topbar({menuOpen,setMenuOpen}) {
         <div className={"topbar " + (menuOpen && "active")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#intro" className="logo">genius</a>
+                    <a href="#intro" className="logo">toggle button</a>
                 </div>
-                
+
                 <div className="center">
-                    <a href="#intro" className="logo">genius</a>
+                    <a href="#intro" className="logo">Ofsand</a>
                 </div>
 
                 <div className="right">
