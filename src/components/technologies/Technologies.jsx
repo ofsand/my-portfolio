@@ -8,6 +8,7 @@ const Techs = [
     {
         title: 'Front-end',
         img: frontEnd,
+        badgeColor: 'rgb(18, 200, 114)',
         details: [
             'HTML5','CSS3','Bootstrap','JavaScript','React JS'
         ]
@@ -15,6 +16,7 @@ const Techs = [
     {
         title: 'Back-end',
         img: backEnd,
+        badgeColor: '#e67272',
         details: [
             'Symphony','Spring boot','Nest JS'
         ]
@@ -22,6 +24,7 @@ const Techs = [
     {
         title: 'Database',
         img: Database,
+        badgeColor: '#3e8dff',
         details: [
             'Mongo DB','Mysql','Fire base'
         ]
@@ -29,6 +32,7 @@ const Techs = [
     {
         title: 'UI / UX',
         img: UIUX,
+        badgeColor: '#f4b463',
         details: [
             'ADOBE XD','Ilustrator','ADOBE PS'
         ]
@@ -39,27 +43,30 @@ const Techs = [
 export default function Technologies() {
     return (
         <div className='technologies' id='technologies'>
-            {Techs.map((tech) => {
-            const {title,img,details} = tech;
-            return(
-            <div className="tech-container">
-                <h3 className="tech-title">
-                    {title}
-                </h3>
-                <div className="tech-img">
-                    <img src={img} alt="" />
-                    <div className="line"></div>
+            <h2>Technologies</h2>
+            <div className="wrapper">
+                {Techs.map((tech) => {
+                const {title,img} = tech;
+                return(
+                <div className="tech-container">
+                    <h3 className="tech-title">
+                        {title}
+                    </h3>
+                    <div className="tech-img">
+                        <img src={img} alt="" />
+                        <div className="line"></div>
+                    </div>
+                    <div className="tech-details">
+                    {tech.details.map(d => {
+                        return(
+                            <p className="tech-details-item" style={{ background: tech.badgeColor}}>
+                                {d}
+                            </p>
+                    )})}
+                    </div>
                 </div>
-                <div className="tech-details">
-                {tech.details.map(d => {
-                    return(
-                        <p className="tech-details-item">
-                            {d}
-                        </p>
                 )})}
-                </div>
             </div>
-            )})};
         </div>
     )
 }
