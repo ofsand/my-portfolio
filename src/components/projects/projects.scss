@@ -1,3 +1,205 @@
-.portfolio {
-    background-color: lightskyblue;
+@import "../../global.scss";
+
+.projects{
+    position: relative;
+    background-color: $background-white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /********/
+    
+    .slick-slider{
+        height: 100%;
+        overflow: hidden;
+        padding: 0 10px;
+        
+        .slick-dots{
+            bottom: 20px;
+            & li{
+                button::before{
+                font-size: 10px;
+            }
+        }
+        }
+        
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+            font-size: 30px;
+        }
+        
+        .slick-next{
+            right: 10%;
+            width: 30px;
+            height: 30px;
+            @include mobile{
+                right: 10px;
+            }
+        }
+        .slick-prev{
+            left: 10%;
+            width: 30px;
+            height: 30px;
+            z-index: 2;
+            @include mobile{
+                 left: 10px;
+            }
+        }
+    }
+    
+
+    .wrapper{
+        
+        display: flex !important;
+        align-items: flex-end;
+        justify-content: center;
+
+        @include mobile{
+            padding-top: 50px;
+        }
+    
+    /*Container of each project*/
+    .project-container{
+        opacity: 0.9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1%;
+        margin: 2% 5% ;
+        max-width: 35%;
+        height: 40%;
+        background-color: #b2cef5;
+        background-image: linear-gradient(300deg, #d1e5ff 40%, #90c4fb 90%);
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.56);
+
+        @include mobile{
+            font-size: 0.8em;
+            max-width: 75%;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        &:hover{
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
+        }
+
+        .project-wrapper{
+            display: flex;
+            justify-content:flex-start;
+            flex-direction: column;
+
+
+    /*The title*/
+    .project-title{
+        margin: 10px 0px 10px 0px;
+        z-index: 2;
+
+        @include mobile{
+            font-size: 1.5em;;
+        }
+    }
+    /*The image*/
+    .project-img{
+        height:fit-content;
+        text-align: center;
+        overflow: hidden;
+        margin: 10px 0px 10px 0px;
+        z-index: 1;
+        padding: 4px;
+        @include mobile{
+            padding: 0;
+        }
+        img{
+            max-width:95%;
+            max-height:95%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.686);
+            @include mobile{
+                max-width:100%;
+                max-height:100%;
+            }
+        }
+
+    }
+    /*tech items names*/
+    .project-techs-container{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: stretch;
+        height: min-content;
+        overflow: hidden;
+        margin: 0px 0px 10px 0px;
+        padding-bottom: 10px;
+        align-items: center;
+        filter: drop-shadow(1px 1px 2px #0000007c);
+
+        .project-techs{
+            border: 2px solid;
+            opacity: 0.9;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px  rgba(0,0,0, 0.4);
+            height: fit-content;
+            width: fit-content;
+            padding: 3px 10px;
+            margin: 5px 10px 5px 10px;
+        }
+    }
+    /*the horizental line*/
+    /*.line{
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        width: 80%;
+        margin: 0% 10% 0% 10%;
+        height: 2px;
+        border-radius: 10px;
+        bottom: 0px;
+        right:0px;
+    }*/
+    /*Desc*/
+    }
+    .links{
+        padding-bottom: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-around;
+
+        button{
+            overflow: hidden;
+            width: 100px;
+            height: 30px;
+            color: whitesmoke;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 8px 10px;
+            box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.56);
+
+            &.demo{
+                background-color: $buttonColor;
+                &:hover{
+                    color: black;
+                    background-color: rgb(0, 93, 192);
+                    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
+                }
+            }
+            &.github{
+                background-color: rgb(31, 31, 31);
+                &:hover{
+                    color: black;
+                    background-color: rgb(84, 84, 84);
+                    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
+                }
+            }
+        }
+    }
+}
+
+}
 }
