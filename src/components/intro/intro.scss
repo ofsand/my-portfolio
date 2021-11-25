@@ -8,11 +8,17 @@
     @include mobile{
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
 
     .left{
         flex: 0.5;
         overflow: hidden;
+        order: 2;
+
+        @include mobile{
+            order: 1;
+        }
 
         .imageContainer{
             
@@ -24,11 +30,6 @@
             justify-content: center;
             float: right;
             display: none;
-
-            &::before{
-                clip-path: polygon(0% 14%, 100% 0px, 100% 84%, 0px 100%);
-                background: rgb(179, 68, 68) none repeat scroll 0% 0%;
-            }
 
             @include mobile{
                 align-items: flex-start;
@@ -48,6 +49,11 @@
     .right{
         flex: 0.5;
         position: relative;
+        order: 1;
+
+        @include mobile{
+            order: 2;
+        }
 
         .wrapper{
             padding-top: 10%;
@@ -60,6 +66,7 @@
             align-items: center;
 
             @include mobile{
+                height: 35%;
                 padding-left: 0;
                 align-items: center;
             }
@@ -69,20 +76,20 @@
                 margin: 10px 0;
 
                 @include mobile{
-                    font-size: 30px;
+                    font-size: 25px;
                 }
             }
             h2{
                 font-size: 30px;
                 @include mobile{
-                    font-size: 25px;
+                    font-size: 20px;
                 }
             }
             h3{
                 font-size: 20px;
 
                 @include mobile{
-                    font-size: 20px;
+                    font-size: 15px;
                 }
 
                 span{
@@ -91,7 +98,7 @@
                 }
 
                 .ityped-cursor {
-                    animation: blink 0.5s infinite;
+                    animation: blink 0.2s infinite;
                 }
                  
                 @keyframes blink {
@@ -114,35 +121,50 @@
             height: 15%;
             display: flex;
             flex-direction:row;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
 
+            @include mobile{
+                z-index: 2;
+                width: 70%;
+                height: 30%;
+                display: flex;
+                flex-direction:row;
+                justify-content: space-around;
+                align-items: center;
+            }
+
             button{
-                width: 150px;
+                width: 130px;
                 height: 30px;
                 color: whitesmoke;
-                background-color: $themeColor;
+                background-color: $buttonColor;
                 border: none;
                 border-radius: 10px;
                 font-weight: 600;
                 cursor: pointer;
-                filter: drop-shadow(2px 2px 2px #0c5399);
+                box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.56);
 
+                @include mobile{
+                    margin: 0 15px;
+                    width: 190px;
+                }
                 &:hover{
                     color: black;
                     background-color: rgb(0, 93, 192);
+                    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
                 }
             }
         }
 
         .btn-down{
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
             left: calc(50% - 15px);
 
             img{
                 width: 30px;
-                animation: arrowBlink 1500ms infinite;
+                animation: arrowBlink 1000ms infinite;
             }
 
             @keyframes arrowBlink {
@@ -163,17 +185,27 @@
         overflow: hidden;
         line-height: 0;
         transform: rotate(180deg);
+
     }
     
     .custom-shape-divider-top-1637373940 svg {
         position: relative;
         display: block;
         width: calc(205% + 1.3px);
-        height: 400px;
+        height: 180px;
         transform: rotateY(180deg);
+        @include mobile{
+            position: relative;
+            display: block;
+            width: calc(150% + 1.3px);
+            height: 120px;
+            transform: rotateY(180deg);
+        }
     }
     
     .custom-shape-divider-top-1637373940 .shape-fill {
-        fill: #1283FF;
+        fill: $themeColor;
     }
+
+    
 }
