@@ -43,7 +43,6 @@ const Techs = [
 export default function Technologies() {
     return (
         <div className='technologies' id='technologies'>
-            <h2>Technologies</h2>
             <div className="wrapper">
                 {Techs.map((tech) => {
                 const {title,img} = tech;

@@ -7,21 +7,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            h2{
-                top: 25px;
-                left: 10px;
-                position: absolute;
-                text-align: center;
-                font-size: 6em;
-                transform: rotate(6deg);
-                opacity: 0.3;
-                color:#007fff;
-
-                @include mobile{
-                    left: 0;
-                    font-size: 4em;
-                }
-            }
 
             @include mobile{
                 display: flex;
@@ -54,8 +39,8 @@
         padding: 1%;
         margin: 5% 2% 5% 2%;
         background-color: #f1f2f6;
-        background-image: linear-gradient(300deg, #d1e5ff 40%, #90c4fb 90%);
-        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.56);
+        border: 1px rgba(0, 0, 0, 0.5) solid;
+        background-image: $backgroundImage;
         transition: transform 500ms ease-in-out 25ms;
 
         @include mobile{
@@ -63,6 +48,7 @@
             font-size: 0.8em;
             margin: 3px 3%;
             justify-content:flex-start;
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
         }
 
         &:hover{
