@@ -2,14 +2,14 @@
 
 .topbar {
     width: 100%;
-    height: 66px;
+    height: 60px;
     background-color: $themeColor;
     color: $mainColor;
     position: fixed;
     top:0;
     z-index: 3;
     transition: all 1s ease;
-    filter: drop-shadow(5px 5px 8px #4596ec8a);
+    filter: drop-shadow(1px 1px 3px #6facea);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -32,17 +32,25 @@
                     flex: 1;
                 }
         }
-
+        
         .center{
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
 
             .logo{
                 font-size: 40px;
                 font-weight: 700;
+                font-family: 'RalewayNormal';
                 text-decoration: none;
                 color: inherit;
+                font-weight: 400;
+                padding: 0 10px;
+                
+                &:hover{
+                    font-weight: 200;
+                }
 
                 @include mobile{
                     flex: 1;
@@ -74,6 +82,7 @@
                     background-color: $mainColor;
                     transform-origin: left;
                     transition: all 2s ease;
+                    background-color: white;
                 }
             }
         }
@@ -81,9 +90,9 @@
     }
 
     &.active{
-        background-color: $mainColor;
+        background-color: $themeColor;
         color: white;
-        filter: drop-shadow(1px 1px 5px #ffffff00);
+        filter: drop-shadow(1px 1px 3px #ffffff00);
 
         .hamburger{
             span{

@@ -1,4 +1,5 @@
 import "./topbar.scss"
+import {FaDev} from "react-icons/fa";
 
 
 export default function Topbar({menuOpen,setMenuOpen}) {
@@ -10,7 +11,8 @@ export default function Topbar({menuOpen,setMenuOpen}) {
                 </div>
 
                 <div className="center">
-                    <a href="#intro" className="logo">Ofsand</a>
+                    <a href="#intro" className="logo"> Ofsand</a>
+                    <FaDev size={40}> </FaDev>
                 </div>
 
                 <div className="right">
