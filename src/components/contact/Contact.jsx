@@ -16,7 +16,6 @@ export default function Contact() {
         <div className='contact' id='contact'>
             <div className="contact-page">
                 <div className="left">
-                    <h2>Get in touch</h2>
                     <form onSubmit={handleSubmit}>
                         <input type="text" placeholder="Email"/>
                         <input type="text" placeholder="Subject"/>
