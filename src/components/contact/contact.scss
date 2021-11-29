@@ -3,9 +3,9 @@
 .contact {
     display: flex;
     flex-direction: column;
+    background-color: #f4f4f4;
 
 .contact-page{
-    background-color: #f4f4f4;
     display: flex;
     position: relative;
     flex:12;
@@ -15,7 +15,7 @@
     }
 
     .left{
-        z-index: 1;
+        z-index: 2;
         flex: 4;
         display: flex;
         flex-direction: column;
@@ -38,7 +38,7 @@
             border-radius: 10px;
             opacity: 0.85;
             padding: 20px 15px 20px 15px;
-            border: 1px rgba(0, 0, 0, 0.5) solid;
+            border: 1px rgba(0, 0, 0, 0.3) solid;
 
             @include mobile{
                 position: absolute;
@@ -61,22 +61,22 @@
                 border-radius: 10px;
                 border: 0px;
                 box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.56);
-                background-color: rgb(231, 243, 255);
+                background-color: rgb(255, 255, 255);
 
             }
             textarea{
                 padding: 5px 10px;
                 width: 80%;
-                height: 55%;
+                height: 52%;
                 font-size: 14px;
                 border-radius: 10px;
                 border: 0px;
                 resize: none;
-                background-color: rgb(231, 243, 255);
+                background-color: rgb(255, 255, 255);
                 box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.56);
                 
                 @include mobile{
-                    height: 55%;
+                    height: 52%;
                 }
             }
             button{
@@ -92,12 +92,14 @@
 
                 &:hover{
                     color: black;
-                    background-color: rgb(0, 93, 192);
+                    background-color: $buttonHover;
                     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.56);
                 }
             }
-            span{
+            .result-msg{
                 color: green;
+                font-size: 0.8em;
+                font-weight: 600;
             }
         }
     }
@@ -109,11 +111,13 @@
         text-align: center;
         align-items: center;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-direction: column;
 
         @include mobile{
             flex: 0.3;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
         .right-up{
@@ -121,7 +125,11 @@
             flex-direction: column;
             font-size: 2.4em;
             justify-content: flex-end;
-            
+            color: $themeColor;
+            opacity: 0.5;
+            @include mobile{
+                flex:0;
+            }
             h3{
                 @include mobile{
                     display: none;
@@ -129,9 +137,20 @@
             }
        }
        .contact-img{
+           flex: 0.6;
            overflow: hidden;
+           @include mobile{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            margin-top: 50px;
+            }
            img{
-               height: 100%;
+               height: 75%;
+               @include mobile{
+                   height: 90%;
+                   width: 90%;
+               }
            }
        }
         .right-down{
@@ -148,9 +167,14 @@
 
             .media-icons{
                 margin-top: 20px;
-                span{
+                a{
                     margin: 2px 5px 2px 5px;
                     cursor: pointer;
+                    color: $background-white;
+
+                    &:hover{
+                        color: $background-dark;
+                    }
                 }
 
                 @include mobile{
@@ -183,7 +207,7 @@
     }
     
     .custom-shape-divider-bottom-1637374055 .shape-fill {
-        fill: #4097f5;
+        fill: $themeColor;
         
     }
 

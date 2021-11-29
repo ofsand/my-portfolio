@@ -1,27 +1,47 @@
 import "./contact.scss"
 import { useState } from "react";
-
+import imgContact from "./images/contact.png";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
+import { green } from "@material-ui/core/colors";
 
+const Result = () => {
+    return(
+        <p>Your msg has been sent, I'll reply ASAP !</p>
+    )
+}
 
 export default function Contact() {
 
-    const [message,setMessage] = useState(false)
-
-    const handleSubmit = (e) => {
+    const [result,showResult] = useState(false);
+    const sendEmail = (e) => {
         e.preventDefault();
-        setMessage(true);
-    }
+    
+        emailjs.sendForm('service_hc829zd', 'template_fyfbdr9', e.target, 'user_QWKQCZ20obu5mFh17D93p')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset();
+          showResult(true);
+      };
+
+    setTimeout(() => {
+        showResult(false)
+    }, 2000);
+
     return (
         <div className='contact' id='contact'>
             <div className="contact-page">
                 <div className="left">
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Email"/>
-                        <input type="text" placeholder="Subject"/>
-                        <textarea placeholder="Message"></textarea>
+                    <form onSubmit={sendEmail}>
+                        <input type="text" placeholder="Email" name="Email"/>
+                        <textarea placeholder="Message" name="Message"></textarea>
                         <button type="submit">Send</button>
-                        {message && <span>Thank you for contacting me, I'll reply ASAP !</span>}
+                        <div className="result-msg">
+                            {result ? <Result/> : null}
+                        </div>
                     </form>
                 </div>
 
@@ -30,12 +50,12 @@ export default function Contact() {
                         <h3>Get in touch !</h3>
                     </div>
                     <div className="contact-img">
-                            <img src="" alt="" />
+                            <img src={imgContact} alt="" />
                     </div>
                     <div className="right-down">
                         <div className="media-icons">
-                            <span><FaGithub size={30} /></span>
-                            <span> <FaLinkedin size={30} /> </span>
+                            <a href="https://github.com/ofsand"> <FaGithub size={30} /> </a>
+                            <a href="https://www.linkedin.com/in/zesoufian/"> <FaLinkedin size={30} /> </a>
                         </div>
                     </div>
                 </div>
