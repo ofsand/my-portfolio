@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.f7649854.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.12b5d4da.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.12b5d4da.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.bae2475b.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.bae2475b.js.map",
+    "static/css/2.0f4ceb2f.chunk.css": "/my-portfolio/static/css/2.0f4ceb2f.chunk.css",
+    "static/js/2.032421de.chunk.js": "/my-portfolio/static/js/2.032421de.chunk.js",
+    "static/js/2.032421de.chunk.js.map": "/my-portfolio/static/js/2.032421de.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "static/css/2.0f4ceb2f.chunk.css.map": "/my-portfolio/static/css/2.0f4ceb2f.chunk.css.map",
+    "static/css/main.f7649854.chunk.css.map": "/my-portfolio/static/css/main.f7649854.chunk.css.map",
+    "static/js/2.032421de.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.032421de.chunk.js.LICENSE.txt",
+    "static/media/menu.scss": "/my-portfolio/static/media/VarelaRound-Regular.3b7ffe17.ttf",
+    "static/media/UI_UX.24f43b81.png": "/my-portfolio/static/media/UI_UX.24f43b81.png",
+    "static/media/abnsoft.765f330a.png": "/my-portfolio/static/media/abnsoft.765f330a.png",
+    "static/media/back_end.f3b20333.png": "/my-portfolio/static/media/back_end.f3b20333.png",
+    "static/media/capgemini-logo.951fcc33.png": "/my-portfolio/static/media/capgemini-logo.951fcc33.png",
+    "static/media/coming-soon-app.6ad4ad03.png": "/my-portfolio/static/media/coming-soon-app.6ad4ad03.png",
+    "static/media/contact.c1087ee2.png": "/my-portfolio/static/media/contact.c1087ee2.png",
+    "static/media/database.87d0b7b1.png": "/my-portfolio/static/media/database.87d0b7b1.png",
+    "static/media/ensa.e9c3e5c4.png": "/my-portfolio/static/media/ensa.e9c3e5c4.png",
+    "static/media/front-end.72d2072c.webp": "/my-portfolio/static/media/front-end.72d2072c.webp",
+    "static/media/fst.1a46ce02.png": "/my-portfolio/static/media/fst.1a46ce02.png",
+    "static/media/intro-new.dc321832.png": "/my-portfolio/static/media/intro-new.dc321832.png",
+    "static/media/medianet.5dc3c7ce.png": "/my-portfolio/static/media/medianet.5dc3c7ce.png",
+    "static/media/react.84b541ec.png": "/my-portfolio/static/media/react.84b541ec.png",
+    "static/media/slick-theme.css": "/my-portfolio/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bae2475b.js",
+    "static/css/2.0f4ceb2f.chunk.css",
+    "static/js/2.032421de.chunk.js",
+    "static/css/main.f7649854.chunk.css",
+    "static/js/main.12b5d4da.chunk.js"
+  ]
+}
