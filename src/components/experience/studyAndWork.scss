@@ -1,0 +1,188 @@
+@import "../../global.scss";
+
+
+.exp-class{
+    height: 80vh;
+    width: 80vw;
+
+
+.timeline-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+
+    @include mobile{
+        font-size: 1em;
+    }
+    
+
+
+    /*Psitionning of data container wrapper*/
+    .timeline-item{
+        display: flex;
+        justify-content: flex-end;
+
+        margin: 10px 0;
+        /*background-color: darkgreen;*/
+        width: 550px;
+        height: auto;
+        position: relative;
+        transition: transform 500ms ease-in-out 25ms;
+        background-image: $backgroundImage;
+        text-align: center;
+        border-radius: 10px;
+        padding: 0px;
+        border-radius: 10px;
+        border: 1px rgba(0, 0, 0, 0.3) solid;
+
+        
+        @include mobile{
+            width: 95%;
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
+        }
+
+        &:hover{
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
+        }
+
+        .title{
+            text-align: center;
+            padding: 0px 5px;
+            margin-bottom: 8px;
+            font-size: 1.0em;
+        }
+        p{
+            font-size: 1.0em;
+        }
+
+        @include mobile{
+            p{
+                font-size: 0.9em;
+            }
+            .title{
+                font-size: 0.9em;
+            }
+        }
+
+        &:hover{
+            transform: translateX(0px) translateY(3px);
+            transform: scale(1.1);
+        }
+
+            /*Positionning of the even timeline item content*/
+                justify-content: flex-end;
+                /*Positionning of image to the right*/
+                .item-element:nth-child(1){
+                    text-align: center;
+                    order:1;
+                    flex: 0.3;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+
+                    @include mobile{
+                        flex: 0.24;
+                    }
+
+                    & img{
+                        height: 70%;
+                        width: 70%;
+                        object-fit:contain;
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.1);
+                    }
+                }
+                /*Positionning of time to the right*/
+                .item-element:nth-child(2){
+                    text-align: right;
+                    order:3;
+                    flex: 0.2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    @include mobile{
+                        flex: 0.33;
+                    }
+                    .h6:nth-child(1){
+                        flex: 0.4;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        h6{
+                            color: rgb(16, 19, 110);
+                            font-size: 0.9em;
+                        }
+                    }
+                    .h6:nth-child(2){
+                        flex: 0.15;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        font-size: 1.2em;
+                    }
+                    .h6:nth-child(3){
+                        flex: 0.2;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0px 20px;
+                    }
+                    .h6:nth-child(4){
+                        flex: 0.15;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        font-size: 1.2em;
+                    }
+                }
+                /*Positionning of other data on the left*/
+                .item-element:nth-child(3){
+                    text-align: left;
+                    order:2;
+                    flex: 0.5;
+                    padding: 2px;
+                    @include mobile{
+                        flex: 0.53;
+                    }
+                    .item-element-2{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+                        padding: 5px;
+                        font-size: 1.0em;
+                        font-weight: 100;
+                        color: rgb(60, 60, 60);
+                        text-decoration: underline;
+                        
+                        @include mobile{
+                        font-size: 0.9em;
+                        }
+                    }
+                }
+            
+            
+        /*Define the data container*/
+        .timeline-item-content{
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: flex;
+            padding: 5px 0 0 0;
+            margin: 4px 0px 0 0px;
+        }
+
+        .desc{
+            padding: 10px 10px;
+            font-size: 0.9em;
+        }
+            
+    }
+}
+
+
+}
