@@ -1,6 +1,7 @@
 import "./intro.scss"
 import { useEffect,useRef } from "react";
 import { init } from "ityped";
+import imgIntro2 from "./images/intro-new.png";
 
 export default function Intro() {
 
@@ -19,7 +20,7 @@ export default function Intro() {
         <div className='intro' id='intro'>
             <div className="left">
                 <div className="imageContainer">
-                    <img src="assets/man.png" alt="man"></img>
+                    <img src={imgIntro2} alt="man"></img>
                 </div>
             </div>
             <div className="right">
@@ -31,10 +32,10 @@ export default function Intro() {
                         </h3>
                 </div>
                 <div className="wrapper_2">
-                    <button type="submit">View my Resume</button>
-                    <button type="submit">Hire me</button>
+                    <button type="submit" onClick={()=> window.open("https://cvdesignr.com/p/6189671c33b67", "_blank")}>View my Resume</button>
+                    <button type="submit" onClick="#contact">Hire me</button>
                 </div>
-                <a href="#experience" className="btn-down">
+                    <a href="#experience" className="btn-down">
                     <img src="assets/down.png" alt="down"></img>
                 </a>
             </div>

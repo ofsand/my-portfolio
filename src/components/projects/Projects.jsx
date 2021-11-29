@@ -2,16 +2,15 @@ import "./projects.scss";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import project1 from "./images/project1.png"
-import project2 from "./images/project2.png"
+import comingSoonApp from "./images/coming-soon-app.png"
 
 
 const projects = [
     {
     title: 'Real time chat App',
-    img: project1,
-    linkDemo: 'www.google.com',
-    linkGithub: 'www.google.com',
+    img: comingSoonApp,
+    linkDemo: '/',
+    linkGithub: '/',
     techs: [{
         name:'HTML5',
         color: 'green'
@@ -19,10 +18,6 @@ const projects = [
     {
         name:'CSS3',
         color: 'green'
-    },
-    {
-        name:'Spring boot',
-        color: '#e67272'
     },
     {
         name:'Firebase',
@@ -34,10 +29,10 @@ const projects = [
     }]
 },
     {
-    title: 'Real time chat App',
-    img: project2,
-    linkDemo: 'www.google.com',
-    linkGithub: 'www.google.com',
+    title: 'Task Management Application',
+    img: comingSoonApp,
+    linkDemo: '/',
+    linkGithub: '/',
     techs: [{
         name:'HTML5',
         color: 'green'
@@ -47,63 +42,11 @@ const projects = [
         color: 'green'
     },
     {
-        name:'Spring boot',
+        name:'Sping Boot',
         color: '#e67272'
     },
     {
-        name:'Firebase',
-        color: '#007fff'
-    },
-    {
-        name:'React JS',
-        color: 'green'
-    }]
-},
-    {
-    title: 'Real time chat App',
-    img: project1,
-    linkDemo: 'www.google.com',
-    linkGithub: 'www.google.com',
-    techs: [{
-        name:'HTML5',
-        color: 'green'
-    },
-    {
-        name:'CSS3',
-        color: 'green'
-    },
-    {
-        name:'Spring boot',
-        color: '#e67272'
-    },
-    {
-        name:'Firebase',
-        color: '#007fff'
-    },
-    {
-        name:'React JS',
-        color: 'green'
-    }]
-},
-    {
-    title: 'Real time chat App',
-    img: project2,
-    linkDemo: 'www.google.com',
-    linkGithub: 'www.google.com',
-    techs: [{
-        name:'HTML5',
-        color: 'green'
-    },
-    {
-        name:'CSS3',
-        color: 'green'
-    },
-    {
-        name:'Spring boot',
-        color: '#e67272'
-    },
-    {
-        name:'Firebase',
+        name:'MongoDB',
         color: '#007fff'
     },
     {
@@ -111,7 +54,6 @@ const projects = [
         color: 'green'
     }]
 }
-
 ];
 
 export default function Projects() {

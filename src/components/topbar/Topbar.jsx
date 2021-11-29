@@ -12,7 +12,7 @@ export default function Topbar({menuOpen,setMenuOpen}) {
 
                 <div className="center">
                     <a href="#intro" className="logo"> Ofsand</a>
-                    <FaDev size={40}> </FaDev>
+                    <FaDev href="#intro" size={40}> </FaDev>
                 </div>
 
                 <div className="right">

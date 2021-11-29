@@ -7,7 +7,7 @@ import Technologies from "./components/technologies/Technologies"
 import "./app.scss"
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
-
+import { BrowserRouter as Router , Switch, Route } from "react-router";
 
 function App() {
   const [menuOpen,setMenuOpen] = useState(false)

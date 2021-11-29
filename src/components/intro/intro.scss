@@ -15,32 +15,29 @@
         flex: 0.5;
         overflow: hidden;
         order: 2;
-
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         @include mobile{
             order: 1;
         }
 
         .imageContainer{
-            
-            width: 700px;
-            height: 700px;
-            background-color: $themeColor;
-            border-radius: 50%;
+            display: flex;
             align-items: flex-end;
-            justify-content: center;
+            justify-content: flex-end;
             float: right;
-            display: none;
 
             @include mobile{
                 align-items: flex-start;
             }
 
             img{
-                height: 85%;
-                display: none;
-
+                height: 90%;
+                width: 90%;
                 @include mobile {
-                    height: 65%;
+                    height: 95%;
+                    width: 95%;
                 }
             }
 
@@ -94,7 +91,9 @@
 
                 span{
                     font-size: inherit ;
-                    color: $themeColor;
+                    color: $buttonColor;
+                    font-family: SourceCode !important;
+
                 }
 
                 .ityped-cursor {
@@ -151,7 +150,7 @@
                 }
                 &:hover{
                     color: black;
-                    background-color: rgb(0, 93, 192);
+                    background-color: $buttonHover;
                     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
                 }
             }
@@ -191,14 +190,14 @@
     .custom-shape-divider-top-1637373940 svg {
         position: relative;
         display: block;
-        width: calc(205% + 1.3px);
+        width: calc(220% + 1.3px);
         height: 180px;
         transform: rotateY(180deg);
         @include mobile{
             position: relative;
             display: block;
             width: calc(150% + 1.3px);
-            height: 120px;
+            height: 90px;
             transform: rotateY(180deg);
         }
     }

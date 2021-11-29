@@ -1,68 +1,21 @@
 import "./experience.scss";
-
-const experiences = [
-    {
-        title: 'title 1',
-        place: 'place 1',
-        city: 'city 1',
-        time: 'Feb 20 2020',
-        desc: 'text 1text 1text 1text 1ffffffffff ffffffff ffff fffffffffff'
-    },
-    {
-        title: 'title 2',
-        place: 'place 2',
-        city: 'city 2',
-        time: 'Feb 20 2020',
-        desc: 'text 2'
-    },
-    {
-        title: 'title 3',
-        place: 'place 3',
-        city: 'city 3',
-        time: 'Feb 20 2020',
-        desc: 'text 3'
-    },
-    {
-        title: 'self thaught'
-    },
-    {
-        title: 'self thaught'
-    }
-    
-];
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navigation from "./Navigation";
+import Study from "./Study";
+import Work from "./Work";
 
 export default function Experience() {
 
     return (
         <div className="experience" id="experience">
-            <div className="experienceTitles">
-                <h2 className="study">Studies</h2>
-                <h2 className="work">Work Experience</h2>
-            </div>
-            <div className="timeline-container">
-                <span className="square square-top"></span>
-                {experiences.map((exp) => {
-                    const {title, place, city, time, desc} = exp;
-                    return(
-                    <div className="timeline-item">
-                        <div className="timeline-item-content">
-                            <div className="item-element">
-                                <h6>{time}</h6>
-                            </div>
-                            <div className="item-element">
-                                <h5>{title}</h5>
-                                <div className="item-element-2">
-                                    <h5 className="item-element-2-content">{place}</h5>
-                                    <h5 className="item-element-2-content">{city}</h5>
-                                </div>
-                                <p>{desc}</p>
-                            </div>
-                            <span className="square square-middle"></span>
-                        </div>
-                    </div>
-                )})}
-                <span className="square square-bottom"></span>
-            </div>
-        </div>
-    )
+        <BrowserRouter>
+          <Navigation/>
+            <Routes>
+                <Route path="/" element={<Study/>} />
+                <Route path="/study" element={<Study/>} />
+                <Route path="/work" element={<Work/>} />
+            </Routes>
+        </BrowserRouter>
+      </div>
+    );
 }

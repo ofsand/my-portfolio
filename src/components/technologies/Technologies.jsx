@@ -10,7 +10,7 @@ const Techs = [
         img: frontEnd,
         badgeColor: 'rgb(18, 200, 114)',
         details: [
-            'HTML5','CSS3','Bootstrap','JavaScript','React JS'
+            'HTML5','CSS3','Bootstrap','JavaScript','React Js'
         ]
     },
     {
@@ -18,7 +18,7 @@ const Techs = [
         img: backEnd,
         badgeColor: '#e67272',
         details: [
-            'Symphony','Spring boot','Nest JS'
+            'Symphony','Spring boot','Node Js'
         ]
     },
     {

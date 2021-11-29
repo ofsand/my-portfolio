@@ -70,16 +70,17 @@
         max-width: 35%;
         height: 40%;
         background-color: #b2cef5;
-        background-image: linear-gradient(300deg, #d1e5ff 40%, #90c4fb 90%);
+        background-image: $backgroundImage;
         text-align: center;
         border-radius: 10px;
-        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.56);
+        border: 1px rgba(0, 0, 0, 0.3) solid;
 
         @include mobile{
             font-size: 0.8em;
             max-width: 75%;
             height: 70vh;
             overflow: hidden;
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
         }
 
         &:hover{
@@ -91,6 +92,10 @@
             justify-content:flex-start;
             flex-direction: column;
 
+            @include mobile{
+                height: 100%;
+                justify-content: space-between;
+            }
 
     /*The title*/
     .project-title{
@@ -103,6 +108,9 @@
     }
     /*The image*/
     .project-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height:fit-content;
         text-align: center;
         overflow: hidden;
@@ -146,6 +154,7 @@
             width: fit-content;
             padding: 3px 10px;
             margin: 5px 10px 5px 10px;
+            font-size: 0.9em;
         }
     }
     /*the horizental line*/
@@ -168,6 +177,9 @@
         flex-direction: row;
         align-self: center;
         justify-content: space-around;
+        a{
+            overflow: hidden;
+        }
 
         button{
             overflow: hidden;
@@ -185,12 +197,12 @@
                 background-color: $buttonColor;
                 &:hover{
                     color: black;
-                    background-color: rgb(0, 93, 192);
+                    background-color: $buttonHover;
                     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
                 }
             }
             &.github{
-                background-color: rgb(31, 31, 31);
+                background-color: $background-dark;
                 &:hover{
                     color: black;
                     background-color: rgb(84, 84, 84);

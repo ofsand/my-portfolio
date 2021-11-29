@@ -39,7 +39,7 @@
         padding: 1%;
         margin: 5% 2% 5% 2%;
         background-color: #f1f2f6;
-        border: 1px rgba(0, 0, 0, 0.5) solid;
+        border: 1px rgba(0, 0, 0, 0.3) solid;
         background-image: $backgroundImage;
         transition: transform 500ms ease-in-out 25ms;
 
@@ -52,8 +52,8 @@
         }
 
         &:hover{
-            transform: translateX(0px) translateY(-2px);
             box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
+            transform: scale(1.1);
         }
 
         /*The title*/
@@ -109,6 +109,7 @@
             justify-content: center;
             height: min-content;
             margin: 10px 0px 10px 0px;
+            font-size: 0.9em;
 
             @include mobile{
                 margin: 4px 0px;

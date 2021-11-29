@@ -1,0 +1,35 @@
+@import "../../global.scss";
+
+.experience-navbar{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 300px;
+        
+        li{
+            
+            a {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    color: rgb(109, 165, 218);
+                }
+            }
+            .active{
+                color:  $buttonColor;
+                position: relative;
+                font-size: 24px;
+            }
+        }
+    }
+}
+

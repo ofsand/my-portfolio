@@ -1,7 +1,10 @@
 $mainColor: #122246;
-$themeColor:  #4f96dd;
-$background-white:#f4f4f4;
-$buttonColor: #2381df;
+$themeColor:  #6facea;
+$background-white: #f7f2f2;
+$background-dark: #151414;
+$buttonColor: #3c77b3;
+$buttonHover: #10579e;
+$backgroundImage: linear-gradient(150deg, #edf5ff 40%, #dbedff 90%);
 
 $width: 768px;
 
@@ -9,4 +12,43 @@ $width: 768px;
     @media (max-width: #{$width}) {
         @content
     }
+};
+
+@font-face{
+    font-family: 'RalewayItalic';
+    src: url(./data/fonts/Raleway-Italic-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: 'RalewayNormal';
+    src: url(./data/fonts/Raleway-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: 'SourceCode';
+    src: url(./data/fonts/SourceCodePro-ExtraLight.ttf);
+}
+@font-face{
+    font-family: 'VarelaRound';
+    src: url(./data/fonts/VarelaRound-Regular.ttf);
+}
+@font-face{
+    font-family: 'Rubik-VariableFont_wght';
+    src: url(./data/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+h1, h2, h3 ,h4 ,h6{
+    font-family: VarelaRound;
+}
+
+h6, h5, button{
+    font-family: RalewayNormal;
+}
+
+a{
+    font-family: Rubik-VariableFont_wght;
+}
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+
 }
