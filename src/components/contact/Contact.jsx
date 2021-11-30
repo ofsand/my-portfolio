@@ -3,7 +3,6 @@ import { useState } from "react";
 import imgContact from "./images/contact.png";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
-import { green } from "@material-ui/core/colors";
 
 const Result = () => {
     return(

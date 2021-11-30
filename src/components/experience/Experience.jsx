@@ -11,7 +11,7 @@ export default function Experience() {
         <BrowserRouter>
           <Navigation/>
             <Routes>
-                <Route path="/" element={<Study/>} />
+                <Route exact path="/" element={<Study/>} />
                 <Route path="/study" element={<Study/>} />
                 <Route path="/work" element={<Work/>} />
             </Routes>
